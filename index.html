@@ -6,7 +6,9 @@
     <title>vue_udemy_tutorial</title>
   </head>
   <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <div id="app">
+  		<input type="text" v-on:input="changeTitle">
+  		<p>{{ title }}</p>
+	</div>
   </body>
 </html>
