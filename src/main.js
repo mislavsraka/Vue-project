@@ -10,7 +10,8 @@ Vue.config.productionTip = false
 new Vue({
 	el: '#app',
   data: {
-  	title: 'Hello World!'
+  	title: 'Hello World!',
+  	link: 'https://google.hr'
   },
   methods: {
   	sayHello: function() {
