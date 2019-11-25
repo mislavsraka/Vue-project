@@ -8,16 +8,15 @@ Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-	el: '#app',
+	el: '#exercise',
   data: {
-  	title: 'Hello World!',
-  	link: 'https://google.hr',
-  	finishedLink: '<a href="https://google.hr">Google</a>'
+  	name: 'Mislav Sraka',
+  	age: '27',
+  	slika: 'https://static.igre123.net/slike/109554-38506/slika-38506.jpg'
   },
   methods: {
-  	sayHello: function() {
-  		this.title = "Hello!";
-    	return this.title;
-    }
+  	random: function() {
+  		return Math.random();
+  	}
   }
 });
