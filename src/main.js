@@ -11,7 +11,8 @@ new Vue({
 	el: '#app',
   data: {
   	title: 'Hello World!',
-  	link: 'https://google.hr'
+  	link: 'https://google.hr',
+  	finishedLink: '<a href="https://google.hr">Google</a>'
   },
   methods: {
   	sayHello: function() {
