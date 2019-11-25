@@ -10,14 +10,11 @@ Vue.config.productionTip = false
 new Vue({
 	el: '#app',
   data: {
-  	title: 'Hello World!',
-  	link: 'https://google.hr',
-  	finishedLink: '<a href="https://google.hr">Google</a>'
+  	counter: 0
   },
   methods: {
-  	sayHello: function() {
-  		this.title = "Hello!";
-    	return this.title;
+  	increase: function() {
+  		this.counter++;
     }
   }
 });
