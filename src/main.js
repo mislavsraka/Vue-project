@@ -3,34 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import './assets/css/style.css'
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
 	el: '#app',
-  data: {
-  	counter: 0,
-  	secondCounter: 0,
-  }, 
-  computed: {
-  	output: function(){
-  		console.log('Computed');
-  		return this.counter > 5 ? 'Greater 5' : 'Smaller than 5';
-  	}
-  },
-  watch: {
-  	counter: function(value) {
-  		var vm = this;
-  		setTimeout(function() {
-  			vm.counter = 0;
-  		},2000);
-  	}
-  },
-  methods: {
-  	result: function() {
-  		console.log('Method');
-  		return this.counter > 5 ? 'Greater 5' : 'Smaller than 5';
-  	}
-  }
+	data: {
+		attachRed: false,
+	}
 });
