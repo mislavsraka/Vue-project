@@ -10,11 +10,19 @@ Vue.config.productionTip = false
 new Vue({
 	el: '#exercise',
   data: {
-  	value: ''
+  	value: 0,
   },
-  methods: {
-  	alertMe: function() {
-  		alert('Alert!');
+  computed: {
+  	result: function() {
+  		return this.value == 37 ? 'done' : 'not there yet'; 
+  	}
+  },
+  watch: {
+  	result: function() {
+  		var vm = this;
+  		setTimeout(function() {
+  			vm.value = 0;
+  		}, 5000);
     }
   }
 });
