@@ -12,7 +12,8 @@ new Vue({
   data: {
   	counter: 0,
   	x: 0,
-  	y: 0
+  	y: 0,
+  	name: 'Mislav'
   },
   methods: {
   	increase: function(step, event) {
