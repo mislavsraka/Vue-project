@@ -3,18 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import './assets/css/style.css'
+import './assets/css/app.css'
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
 	el: '#app',
-	data: {
-    ingredients: ['meat', 'fruit', 'cookies'],
-    persons: [
-    {name: 'Max', age: 27, color: 'red' },
-    {name: 'Mislav', age: 'unknown', color: 'blue' },
-    ]
-  }
+	
 });
