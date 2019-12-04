@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import './assets/css/style.css'
 
 Vue.config.productionTip = false
 
@@ -10,19 +11,39 @@ Vue.config.productionTip = false
 new Vue({
 	el: '#exercise',
   data: {
-  	value: 0,
+  	effectClasses: { 
+  		highlight: false, 
+  		shrink: true
+  	},
+    float: 'float',
+    userClass: '',
+    isVisible: true,
+    myStyle: {
+      width: '100px',
+      height: '150px',
+      backgroundColor: 'gray'
+    },
+    progressBar: {
+      width: '0px',
+      backgroundColor: 'red'
+    }
   },
-  computed: {
-  	result: function() {
-  		return this.value == 37 ? 'done' : 'not there yet'; 
-  	}
-  },
-  watch: {
-  	result: function() {
-  		var vm = this;
-  		setTimeout(function() {
-  			vm.value = 0;
-  		}, 5000);
+  methods: {
+    startEffect: function() {
+     var vm = this;
+      setInterval(function() {
+      vm.effectClasses.highlight = !vm.effectClasses.highlight;
+        vm.effectClasses.shrink = !vm.effectClasses.shrink;
+      }, 1000);
+    },
+    startProgress: function() {
+    var vm = this;
+      var width = 0;
+     
+    setInterval(function() {
+      width = width + 10;
+      vm.progressBar.width = width + 'px';
+      }, 500);
     }
   }
 });
