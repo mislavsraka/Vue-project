@@ -11,15 +11,6 @@ Vue.config.productionTip = false
 new Vue({
 	el: '#app',
 	data: {
-		color: 'yellow',
-		width: 100
-	},
-	computed: {
-		myStyle: function() {
-			return {
-				backgroundColor: this.color,
-				width: this.width + 'px'
-			};
-		}
-	}
+    show: true
+  }
 });
